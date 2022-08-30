@@ -4,11 +4,20 @@
 3, 5 -> 243 (3⁵)
 2, 4 -> 16 */
 
+void Stepen(int first, int second){
+    int result = 1;
+    for (int i = 1; i <= second; i++)
+    {
+        result = result * first;
+    }
+    Console.WriteLine($"Число {first} в степени {second} = {result}");
+}
+Console.WriteLine("Введите число: ");
+int fst = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите значение степени, в которую будем возводить число: ");
+int snd = Convert.ToInt32(Console.ReadLine());
 
-
-
-
-
+Stepen(fst,snd);
 
 
 

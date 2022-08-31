@@ -29,7 +29,7 @@ Stepen(fst,snd);
 9012 -> 12 */
 
 
-void Summa(int chislo){
+/* void Summa(int chislo){
 
         if (chislo >= 1 && chislo <= 9){
         Console.WriteLine("Сумма цифр в числе равна: " + chislo);
@@ -163,8 +163,26 @@ void Summa(int chislo){
 Console.WriteLine("Введите число: ");
 int chislo = Convert.ToInt32(Console.ReadLine());
 Summa(chislo);
+ */
 
-
+//  Второй вариант решение второй задачи___________________________________________________________
+void function(string chislo){
+    int result = 0;
+    int length = chislo.Length;   // Задаем переменную и определяем длинну строки 
+   for (int i = 0; i < length; i++)   // Проходимся по всей длинне строки в этом цикле
+   {
+    char ch = chislo[i];                 //каждый элемент строки присваиваем переменно в виде символа 
+    int num = int.Parse(ch.ToString());  //погуглил и нашел способ как сонвертануть символ в int(число)
+    Console.WriteLine(num);              // выводим на экран для проверки.. конвертанулось ли...
+    result = result + num;               // ну и суммируем полученные цифры
+     
+   }
+   Console.WriteLine("Сумма цифр введённого числа = " + result);            // выводим ответ.
+   
+}
+Console.WriteLine("Введите число: ");   
+string chislo = Console.ReadLine();   // Вводим число как строку...
+function(chislo);
 
 
 

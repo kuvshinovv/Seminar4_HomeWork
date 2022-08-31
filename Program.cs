@@ -166,7 +166,7 @@ Summa(chislo);
  */
 
 //  Второй вариант решение второй задачи___________________________________________________________
-void function(string chislo){
+/* void function(string chislo){
     int result = 0;
     int length = chislo.Length;   // Задаем переменную и определяем длинну строки 
    for (int i = 0; i < length; i++)   // Проходимся по всей длинне строки в этом цикле
@@ -182,7 +182,7 @@ void function(string chislo){
 }
 Console.WriteLine("Введите число: ");   
 string chislo = Console.ReadLine();   // Вводим число как строку...
-function(chislo);
+function(chislo); */
 
 
 
@@ -194,3 +194,31 @@ function(chislo);
 /* Задача 29: Напишите программу, которая задаёт массив из произвольного элементов и выводит их на экран.
 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 6, 1, 33 -> [6, 1, 33] */
+
+int[] VvodDannih(int size){    // функция ввода элементов массива
+    int[] array = new int[size];   // Создал новый массив с размером size
+    
+    for (int i = 0; i <= size-1; i++)
+    {
+        Console.WriteLine($"Введите {i} элемент массива: ");   //тут вводим сами элементы массива и запоминаем их 
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return array; // возвращаем из функции массив
+}
+
+void ShowArray(int[] array){                   // функция вывода массива... вобщем то то, что на семинаре делали.
+    Console.Write($"Получился массив: [ ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i]+" ");
+    }
+    Console.Write($"]");
+}
+
+Console.WriteLine("Сколько элементов будет в массиве?");   // задаем значение размера массива которое потом будем использовать при создании массива.
+int allElements = Convert.ToInt32(Console.ReadLine());
+ShowArray(VvodDannih(allElements)); 
+
+
+
+
